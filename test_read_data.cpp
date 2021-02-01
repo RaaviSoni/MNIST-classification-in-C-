@@ -13,7 +13,6 @@ void read_test_data() {
 	ifstream csvread;
 	csvread.open("mnist_test.csv", ios::in);
 	if (csvread) {
-		//Datei bis Ende einlesen und bei ';' strings trennen
 		string s;
 		int data_pt = 0;
 		while (getline(csvread, s)) {
@@ -24,13 +23,6 @@ void read_test_data() {
 				getline(ss, substr, ',');
 
 				cout << "Output: " << substr << " " << endl; 
-
-				// if (pxl == 0) {
-				// 	label_test[data_pt] = stoi(substr);
-				// }
-				// else {
-				// 	data_test[data_pt][pxl - 1] = stoi(substr);
-				// }
 
 				pxl++;
 			}
